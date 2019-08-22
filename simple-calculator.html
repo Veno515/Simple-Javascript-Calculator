@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Calculator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <script>
+            function calc(){
+              var n1 = parseFloat(document.getElementById('n1').value);
+              var n2 = parseFloat(document.getElementById('n2').value);
+              var oper = document.getElementById('operators').value;
+                if(oper === '+'){
+                  var n2 = document.getElementById('result').value= n1 + n2;  
+                }
+                
+                if(oper === '-'){
+                  var n2 = document.getElementById('result').value= n1 - n2;  
+                }
+                
+                if(oper === '/'){
+                  var n2 = document.getElementById('result').value= n1 / n2;  
+                }
+                
+                if(oper === '*'){
+                  var n2 = document.getElementById('result').value= n1 * n2;  
+                }
+                
+                 if(oper === '%'){
+                  var n2 = document.getElementById('result').value= n1 % n2;  
+                }
+            }
+        </script>
+        
+    </head>
+    <body>
+        <div style="text-align: center; margin-top: 200px;">
+        <h2>Javascript Calculator</h2>
+        <input type="text" id="n1"/><br/><br/>
+        <input type="text" id="n2"/><br/><br/>
+        
+        <select id="operators">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="*">*</option>
+            <option value="%">%</option>
+
+
+
+        </select>
+        <button onclick="calc();">=</button>
+        <input type="text" id="result" style="width: 100px"/>
+        </div>
+    </body>
+</html>
